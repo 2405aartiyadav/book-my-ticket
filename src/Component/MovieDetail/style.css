@@ -1,0 +1,54 @@
+.detail {
+    border: 1px solid black;
+    height: 25rem;
+    width:900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+}
+.movieImgdiv>div{
+    background-color: black;
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+
+}
+.moviedes{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(194, 87, 87);
+    font-size: 18px;
+    padding: 4%;
+    
+}
+.movieImg {
+    height: 20rem;
+    width: 400px;
+    border: 2px solid black;
+}
+
+.ratingDiv {
+    background-color: rgb(122, 113, 113);
+    max-width: 400px;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 3%;
+}
+
+.ratingDiv>span{
+margin-right: 100px;   
+}
+.movieLang{
+    background-color: rgb(122, 113, 113);
+    margin-top: 3%;
+    max-width: 400px;
+    min-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 2%;
+
+}
