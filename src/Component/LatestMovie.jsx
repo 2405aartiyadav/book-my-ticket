@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 function LatestMovie() {
   const [latestMovies, setLatestMovies] = useState([]);
@@ -22,14 +23,15 @@ function LatestMovie() {
       <div className="container-fluid my-3 row" id="latestMovie">
         <h3>Latest Movies</h3>
         {
-          latestMovies.map((latestmovies) => {
+          latestMovies.map((latestmovies,index) => {
             return (
-              <div className='col latestMovie' >
-
-                {/* <button className='btnlatestMovie' onClick={(event)=>{getDetail(event)}}> */}
-                <img src={img_path + latestmovies.image} alt="moviesImg" className='latestMovieImg' />
-                {/* </button> */}
-                <div className='latestMovieTitle'>
+              
+               <>
+               <Link to={`/movieDetail/${latestmovies.id}`}key={index} className=' col latestMovie'>
+                 <div>
+                 <img src={img_path + latestmovies.image} alt="moviesImg" className='latestMovieImg' />
+               </div>
+               <div className='latestMovieTitle'>
                   <span>{latestmovies.title}</span>
                 </div>
                 <div className="latestMoviegenre">
@@ -39,13 +41,17 @@ function LatestMovie() {
                   <button className='btn btn-danger '>Book</button>
                 </div>
 
-              </div>
+                   </Link>
+              
+                
+               </>
+           
 
             )
           })
         }
       </div>
-      
+
     </>
   )
 }

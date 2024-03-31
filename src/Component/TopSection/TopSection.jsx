@@ -7,9 +7,9 @@ function TopSection() {
     return (
         <div className='row justify-content-around' id="topSection" >
 
-            {sections.map((movies) => {
+            {sections.map((movies,index) => {
                 return (
-                    <div className="col-3 topsection" >
+                    <div className="col-3 topsection" key={index} >
                         <Link to={movies.path}>
                             <h3>{movies.sectionName}</h3>
                         </Link>

@@ -19,10 +19,10 @@ function UpcomingMovie() {
         Now Showing <b><Link to="/latestMovie">In Cinema near you</Link></b>
       </div>
       {
-        upcomingMovies.map((movie) => {
+        upcomingMovies.map((movie,index) => {
           return (
             <>
-              <div className='col latestMovie' >
+              <div className='col latestMovie' key={index}>
                 <img src={img_path + movie.image} alt="moviesImg" className='latestMovieImg' />
                 <div className='des'>
                   <h3>{movie.eventDate}</h3>

@@ -8,9 +8,9 @@ function Slider() {
     return (
         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
-                {imgName.map((img) => {
+                {imgName.map((img,index) => {
                     return (
-                        <div className="carousel-item active">
+                        <div className="carousel-item active" key={index}>
                             <img src={img_path + img} className="d-block w-100 slideimg" alt="..." />
                         </div>
                     )

@@ -21,9 +21,9 @@ function Recommendation() {
             <h3>Recommended Movies</h3>
             {console.log(moviesList)}
             {
-                moviesList.map((recomdMovies) => {
+                moviesList.map((recomdMovies,index) => {
                     return (
-                        <Link to={`/movieDetail/${recomdMovies.id}`}className=' col recomdMovie'>
+                        <Link to={`/movieDetail/${recomdMovies.id}`} key={index} className=' col recomdMovie'>
                             <div className='' >
                                 <div>
                                     <img src={img_path + recomdMovies.image} alt="moviesImg" className='recomdMovieImg' />

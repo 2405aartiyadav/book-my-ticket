@@ -21,11 +21,11 @@ function Events() {
             <h2><b>Events in Nagpur</b></h2>
 
             {
-                events.map((event) => {
+                events.map((event,index) => {
                     return (
                         <>
 
-                            <div className='col eventcontainer' >
+                            <div className='col eventcontainer' key={index} >
                                 <img src={img_path + event.image} alt="eventImg" className='eventImg' />
                                 <div className='eventdes'>
                                     <h3>{event.eventDate}</h3>
